@@ -1,13 +1,30 @@
 """Hypercube bootstrap percolation utilities."""
+from __future__ import annotations
 
-from itertools import combinations
 
 
-def vertices(d):
+
+def vertices(d) -> list:
+    """Vertices.
+    
+    Args:
+        d:
+    
+    Returns:
+        list: Result of type list
+    
+    """
     return list(range(1 << d))
 
 
 def neighbors(v, d):
+    """Neighbors.
+    
+    Args:
+        v:
+        d:
+    
+    """
     for i in range(d):
         yield v ^ (1 << i)
 
@@ -30,6 +47,17 @@ def percolates(initial, d, r=4):
 
 
 def closure(initial, d, r=4):
+    """Closure.
+    
+    Args:
+        initial:
+        d:
+        r (int):
+    
+    Returns:
+        The computed result
+    
+    """
     n = 1 << d
     infected = set(initial)
     changed = True
