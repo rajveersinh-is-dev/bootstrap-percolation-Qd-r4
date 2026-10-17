@@ -1,31 +1,76 @@
+"""Module for mathematical computation and analysis."""
+
+from __future__ import annotations
+
 import itertools
 
+
 def neighbors(v, d):
+    """Neighbors.
+    
+    Args:
+        v:
+        d:
+    
+    """
     for i in range(d):
         yield v ^ (1<<i)
 
+
 def percolates(initial, d):
+    """Percolates.
+    
+    Args:
+        initial:
+        d:
+    
+    Returns:
+        The computed result
+    
+    """
     n = 1<<d
     infected = set(initial)
     changed = True
     while changed:
         changed = False
         for v in range(n):
-            if v in infected: continue
+            if v in infected:
+                continue
             cnt = sum(1 for u in neighbors(v,d) if u in infected)
             if cnt >= 4:  # threshold 4 (but should be general r)
                 infected.add(v); changed=True
     return len(infected)==n
 
-def min_perc(d, r):
+
+def min_perc(d, r) -> tuple:
+    """Min perc.
+    
+    Args:
+        d:
+        r:
+    
+    Returns:
+        tuple: Result of type tuple
+    
+    """
     n = 1<<d
     # threshold r
     def perc(initial):
+        """Perc.
+        
+        Args:
+            initial:
+        
+        Returns:
+            The computed result
+        
+        """
         infected=set(initial); changed=True
         while changed:
             changed=False
             for v in range(n):
-                if v in infected: continue
+                if v in infected:
+                    continue
                 cnt=sum(1 for u in neighbors(v,d) if u in infected)
                 if cnt>=r:
                     infected.add(v); changed=True
