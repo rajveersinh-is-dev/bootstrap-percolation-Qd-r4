@@ -21,5 +21,5 @@ Computed by exact CP-SAT (OR-Tools) for threshold $r=4$.
 
 ## $d=7$ ($n=128$)
 
-- Computation in progress at time of writing; lower bound $\lceil L(7)\rceil=26$.
-- To be updated.
+- Feasible set of size $26$ matching the lower bound: $\{6,8,13,19,21,25,30,32,37,38,43,44,49,55,58,68,73,74,92,98,104,109,110,112,115,123\}$.
+- Lower bound $\lceil L(7)\rceil=26$. Gap $0$ (optimality by lower bound).

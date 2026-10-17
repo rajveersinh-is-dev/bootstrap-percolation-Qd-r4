@@ -24,6 +24,6 @@ Computed by exact CP-SAT optimisation (OR-Tools) for threshold $4$:
 | 4 | 16 | 8 | 8 | 0 |
 | 5 | 32 | 13 | 14 | 1 |
 | 6 | 64 | 18 | 18 | 0 |
-| 7 | 128 | 26 | pending | — |
+| 7 | 128 | 26 | 26 | 0 |
 
 The verified cases show the gap is not uniformly zero; the exact value depends on $d$ in a way not captured by $\lceil L(d)\rceil$ alone.
