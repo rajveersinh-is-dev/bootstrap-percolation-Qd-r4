@@ -8,7 +8,7 @@ Determine $m(Q_d,4)$: the minimum size of an initial set that percolates in the 
 
 - Lower bound $m(Q_d,4)\ge L(d)=d(d^2+3d+14)/24+1$ (Morrison--Noel, reproduced).
 - Exact values verified for $d=4,5,6$: $8,14,18$.
-- Conjecture for the general gap $m-\lceil L\rceil\in\{0,1\}$ based on Steiner quadruple systems.
+- The gap $m-\lceil L\rceil$ is $0,1,0$ for $d=4,5,6$; its general behaviour is an open question.
 
 ## Repository map
 
@@ -28,7 +28,7 @@ python -m pytest tests/ -q
 
 ## Limitations
 
-The conjecture is not proved; $d=7$ computation was in progress at publication. The lower bound is prior work.
+The gap pattern is not proved; $d=7$ computation was in progress at publication. The lower bound is prior work.
 
 ## License
 

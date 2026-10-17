@@ -21,8 +21,12 @@ By exact CP-SAT optimisation (OR-Tools, certificate of optimality for $d=4,5$; f
 
 *Status: COMPUTATIONALLY VERIFIED (finite domains, $d=4,5,6$).*
 
-## Conjecture (pattern of the gap)
+## Open question (pattern of the gap)
 
-Let $g(d)=m(Q_d,4)-\lceil L(d)\rceil$. From the verified cases $g(4)=0$, $g(5)=1$, $g(6)=0$. We conjecture $g(d)\in\{0,1\}$ and $g(d)=1$ iff $d\equiv 1$ or $5\pmod 6$? (Equivalently, iff $d+1\not\equiv 2,4\pmod 6$, i.e. no Steiner quadruple system $\mathrm{SQS}(d+1)$.) This is consistent with Noel's construction attaining $L(d)$ exactly when an SQS$(d+1)$ exists, and with the $d=5$ case (where no SQS$(6)$ exists) having gap $1$.
+Let $g(d)=m(Q_d,4)-\lceil L(d)\rceil$. From the verified cases:
+$g(4)=0$, $g(5)=1$, $g(6)=0$. The gap is small in these cases, but its
+dependence on $d$ is not yet understood. In particular, $d=6$ has gap $0$
+even though no Steiner quadruple system $\mathrm{SQS}(7)$ exists, so the
+gap is not simply governed by the existence of an $\mathrm{SQS}(d+1)$.
 
-*Status: CONJECTURED. Not proved. Requires verification for further $d$ and a construction proving the upper bound for the gap-$1$ cases.*
+*Status: OPEN. The values $g(d)$ for $d\ge 7$ are unknown.*
