@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.opencode/
+results/*.tmp
+paper/*.aux
+paper/*.log
+paper/*.out
+EOF

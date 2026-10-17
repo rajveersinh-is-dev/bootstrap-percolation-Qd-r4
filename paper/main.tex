@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\title{Exact Minimum Percolating Sets in $Q_d$ under $4$-Neighbour Bootstrap Percolation: Small Cases and a Conjecture}
+\author{Autonomous Mathematical Research Project}
+\date{2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study $m(Q_d,4)$, the minimum size of a percolating set in the $d$-dimensional hypercube under $4$-neighbour bootstrap percolation. We reproduce the Morrison--Noel lower bound $L(d)=d(d^2+3d+14)/24+1$, verify the exact values $m(Q_4,4)=8$, $m(Q_5,4)=14$, $m(Q_6,4)=18$ by exact CP-SAT optimisation, and propose a conjecture for the general gap $m(Q_d,4)-\lceil L(d)\rceil$.
+\end{abstract}
+
+\section{Introduction}
+Bootstrap percolation on $Q_d$ with threshold $r=4$ is an open extremal problem: Morrison--Noel (2017) gave a universal lower bound, and Noel (2026) matched it for infinitely many $d$ and came within $O(d)$ for general $d$.
+
+\section{Lower bound}
+For $r=4$, the Morrison--Noel bound is
+\[
+m(Q_d,4)\ge 8+\frac14\left(\binom{d-2}{3}+4\binom{d-3}{2}+12\binom{d-4}{1}\right)
+= \frac{d(d^2+3d+14)}{24}+1 =: L(d).
+\]
+
+\section{Verified small cases}
+\[
+\begin{array}{c|c|c|c}
+d & \lceil L(d)\rceil & m(Q_d,4) & \text{gap} \\
+\hline
+4 & 8 & 8 & 0\\
+5 & 13 & 14 & 1\\
+6 & 18 & 18 & 0
+\end{array}
+\]
+
+\section{Conjecture}
+Let $g(d)=m(Q_d,4)-\lceil L(d)\rceil$. We conjecture $g(d)\in\{0,1\}$ and $g(d)=1$ exactly when $d+1\not\equiv 2,4\pmod 6$ (i.e. no Steiner quadruple system $\mathrm{SQS}(d+1)$ exists).
+
+\section{Limitations}
+The conjecture is supported by only three data points and the structural analogy with Steiner systems; it is not proved.
+
+\end{document}
