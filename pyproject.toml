@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bootstrap_percolation_qd_r4"
+version = "1.0.0"
+description = "Exact minimum percolating sets in Q_d under 4-neighbour bootstrap percolation: lower bound, constructions, and verified small cases"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "rajveersinh-is-dev"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.urls]
+Homepage = "https://github.com/rajveersinh-is-dev/bootstrap-percolation-Qd-r4"
+
+[tool.setuptools]
+py-modules = ['solve_bp']

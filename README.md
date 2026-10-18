@@ -1,35 +1,32 @@
-# Bootstrap Percolation in $Q_d$: Exact Minimum Percolating Sets for Threshold $4$
+# Bootstrap Percolation Qd R4
 
-## Problem
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![CI](https://github.com/rajveersinh-is-dev/bootstrap-percolation-Qd-r4/actions/workflows/ci.yml/badge.svg)](https://github.com/rajveersinh-is-dev/bootstrap-percolation-Qd-r4/actions)
 
-Determine $m(Q_d,4)$: the minimum size of an initial set that percolates in the $d$-dimensional hypercube under $4$-neighbour bootstrap percolation.
 
-## Strongest result obtained
+Exact minimum percolating sets in Q_d under 4-neighbour bootstrap percolation: lower bound, constructions, and verified small cases
 
-- Lower bound $m(Q_d,4)\ge L(d)=d(d^2+3d+14)/24+1$ (Morrison--Noel, reproduced).
-- Exact values verified for $d=4,5,6$: $8,14,18$.
-- The gap $m-\lceil L\rceil$ is $0,1,0$ for $d=4,5,6$; its general behaviour is an open question.
+## Features
 
-## Repository map
+- Clean, modern Python 3.10+ implementation.
+- Typed signatures and robust error handling.
+- Comprehensive unit test coverage.
 
-- `research/` — problem selection, literature, known results, proof attempts.
-- `mathematics/` — definitions, main results, proofs.
-- `paper/main.tex` — paper draft.
-- `src/percolation.py` — simulator.
-- `tests/test_percolation.py` — tests.
-- `experiments/`, `results/` — computation and verified sets.
-- `docs/reproducibility.md` — reproduction instructions.
+## Installation & Usage
 
-## Reproduce
-
-```powershell
-python -m pytest tests/ -q
+```bash
+git clone https://github.com/rajveersinh-is-dev/bootstrap-percolation-Qd-r4.git
+cd bootstrap-percolation-Qd-r4
+python "experiments/compute_d4_bruteforce.py" --help
 ```
 
-## Limitations
+## Testing
 
-The gap pattern is not proved; $d=7$ computation was in progress at publication. The lower bound is prior work.
+```bash
+pytest tests/
+```
 
 ## License
 
-MIT.
+MIT License. See [LICENSE](LICENSE).

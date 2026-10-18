@@ -1,7 +1,23 @@
-from ortools.sat.python import cp_model
-import itertools
+"""Module for mathematical computation and analysis."""
 
-def solve_min(d, r, time_limit=120):
+from __future__ import annotations
+
+
+from ortools.sat.python import cp_model
+
+
+def solve_min(d, r, time_limit=120) -> tuple:
+    """Solve min.
+    
+    Args:
+        d:
+        r:
+        time_limit (int):
+    
+    Returns:
+        tuple: Result of type tuple
+    
+    """
     n = 1<<d
     # neighbors
     nbrs = [[] for _ in range(n)]
